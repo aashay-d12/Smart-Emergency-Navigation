@@ -242,19 +242,29 @@ This project helped in understanding:
 Add screenshots of:
 
 * Home Page
+
 ![Home page](screenshots/home.png)
 
+
 * Traffic Simulation
+
 ![Traffic Simulation](screenshots/traffic-1.png)
+
 ![Traffic Signal Clearance](screenshots/traffic.png)
 
+
 * Route Optimization
-![Route Optimization](screencshots/route.png)
+
+![Route Optimization](screenshots/route.png)
+
 
 * AWS EC2 Deployment
+
 ![AWS EC2 Dashboard](screenshots/ec2.png)
 
+
 * Running Terminal Commands
+
 ![Terminal](screenshots/terminal.png)
 
 ---
