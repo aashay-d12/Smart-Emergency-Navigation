@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EVNF — Emergency Vehicle Navigation | IIIT Pune</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+      <span class="nav-title">EVNF</span>
+      <span class="nav-sub">Emergency Vehicle Navigation Framework</span>
+    </div>
+    <!-- Live system events ticker in navbar -->
+    <div class="nav-ticker">
+      <span class="nav-ticker-label">SYS</span>
+      <div class="nav-ticker-track" id="navTicker">
+        <span class="nav-ticker-item">Initialising simulation…</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="sys-badge online" id="osrmBadge">● Routing Engine</span>
+      <span class="sys-badge online">● Cloud API</span>
+      <span class="sys-badge online">● IoT Core</span>
+      <span class="nav-clock" id="clock">--:--:--</span>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD CONTAINER -->
+  <div class="dashboard-container">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar card">
+      <div class="sb-section" style="padding-bottom: 24px; text-align: center;">
+        <button id="dispatchBtn" class="dispatch-btn pulse-btn" style="margin-top: 8px;">Auto-Dispatch Responder</button>
+      </div>
+
+      <div class="sb-section">
+        <table class="info-table">
+          <tr>
+            <td>Vehicle</td>
+            <td><strong id="mVehicleId">—</strong></td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td><strong id="mStatus">—</strong></td>
+          </tr>
+          <tr>
+            <td>Origin</td>
+            <td id="mOrigin">—</td>
+          </tr>
+          <tr>
+            <td>Destination</td>
+            <td id="mDest">—</td>
+          </tr>
+          <tr>
+            <td>ETA</td>
+            <td id="mEta">—</td>
+          </tr>
+          <tr>
+            <td>Distance</td>
+            <td id="mDist">—</td>
+          </tr>
+          <tr>
+            <td>Reroutes</td>
+            <td id="mReroutes">0</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Signal Priority Plan</div>
+        <div id="signalPlan">
+          <div class="signal-none">No active preemption</div>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Map Legend</div>
+        <div class="legend-list">
+          <div class="legend-row"><span class="legend-dot red"></span>Hospital / Ambulance</div>
+          <div class="legend-row"><span class="legend-dot blue"></span>Police Station</div>
+          <div class="legend-row"><span class="legend-dot orange"></span>Fire Station / MIDC</div>
+          <div class="legend-row"><span class="legend-dot green"></span>NDRF / Response Base</div>
+          <div class="legend-row"><span class="legend-dot teal"></span>IIIT Pune (Reference)</div>
+          <div class="legend-row"><span class="legend-dot grey"></span>Junction / Signal</div>
+          <div class="legend-row" style="margin-top:6px"><span
+              style="display:inline-block;width:24px;height:4px;background:#c0392b;border-radius:2px;margin-right:8px"></span>Active
+            Route</div>
+          <div class="legend-row"><span
+              style="display:inline-block;width:24px;height:3px;background:#27ae60;border-radius:2px;margin-right:8px;opacity:0.7"></span>Clear
+            Road</div>
+          <div class="legend-row"><span
+              style="display:inline-block;width:24px;height:3px;background:#e67e22;border-radius:2px;margin-right:8px"></span>Moderate
+            Traffic</div>
+          <div class="legend-row"><span
+              style="display:inline-block;width:24px;height:3px;background:#c0392b;border-radius:2px;margin-right:8px"></span>Congested
+            Road</div>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Algorithm (Research Paper)</div>
+        <div class="arch-list">
+          <div class="arch-row"><span class="arch-icon">📡</span>IoT GPS → Fog Node</div>
+          <div class="arch-row"><span class="arch-icon">📈</span>Linear Regression — Traffic Prediction</div>
+          <div class="arch-row"><span class="arch-icon">🔀</span>Dijkstra — Priority-Weighted Route</div>
+          <div class="arch-row"><span class="arch-icon">🔄</span>Predictive Rerouting (real-time)</div>
+          <div class="arch-row"><span class="arch-icon">🚦</span>Signal Preemption + Green Window</div>
+          <div class="arch-row"><span class="arch-icon">☁️</span>Cloud API (EC2 + DynamoDB)</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      
+      <!-- STATS ROW -->
+      <div class="stats-row">
+        <div class="stat-card card danger">
+          <span class="stat-num" style="font-size:20px;min-width:auto" id="statVehicleIcon">🚑</span>
+          <div class="stat-info">
+            <strong id="statIncidentLabel">Medical Emergency</strong>
+            <span id="statVehicleId">Initialising…</span>
+          </div>
+        </div>
+        <div class="stat-card card">
+          <span class="stat-num teal" id="statEta">--</span>
+          <div class="stat-info"><strong>ETA (min)</strong><span>AI-Optimised</span></div>
+        </div>
+        <div class="stat-card card">
+          <span class="stat-num green" id="statSaved">--</span>
+          <div class="stat-info"><strong>Min Saved</strong><span>vs baseline</span></div>
+        </div>
+        <div class="stat-card card">
+          <span class="stat-num" id="statSignals">0</span>
+          <div class="stat-info"><strong>Signals</strong><span id="statTraffic">-- avg traffic</span></div>
+        </div>
+        <div class="stat-card card">
+          <span class="stat-num muted" id="statReroutes">0</span>
+          <div class="stat-info"><strong>Reroutes</strong><span>predictive AI</span></div>
+        </div>
+        <div class="stat-card card">
+          <span class="stat-num muted" id="statDispatches">0</span>
+          <div class="stat-info"><strong>Dispatches</strong><span>this session</span></div>
+        </div>
+      </div>
+
+      <!-- MAP CARD -->
+      <div class="map-card card">
+      <div class="map-toolbar">
+        <div class="toolbar-left">
+          <span class="map-label">📍 <span id="incidentLocation">—</span></span>
+          <span class="incident-tag" id="incidentTag">Initialising…</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="route-crumb" id="routeCrumb">Loading route…</span>
+          <span class="tick-badge" id="tickBadge">T+0</span>
+        </div>
+      </div>
+
+      <!-- Leaflet map fills this div -->
+      <div id="leafletMap" class="map-wrap"></div>
+
+      <!-- Congestion strip -->
+      <div class="congestion-strip">
+        <span class="cs-label">AI Congestion Forecast</span>
+        <div class="cs-bars" id="congestionBars"></div>
+      </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Event log footer removed -> moved to navbar ticker -->
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/app.js"></script>
+</body>
+
+</html>

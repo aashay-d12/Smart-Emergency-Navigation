@@ -1,0 +1,18 @@
+{
+  "name": "smart-emergency-navigation",
+  "version": "1.0.0",
+  "description": "Cloud-based smart emergency vehicle navigation demo with live routing, traffic prediction, and signal priority.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/simulation.test.js"
+  },
+  "keywords": [
+    "cloud-computing",
+    "emergency-navigation",
+    "traffic-simulation",
+    "smart-city"
+  ],
+  "author": "",
+  "license": "MIT"
+}

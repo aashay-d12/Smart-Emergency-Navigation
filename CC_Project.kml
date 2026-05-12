@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>CC_Project</name>
+    <description/>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Police</name>
+      <Placemark>
+        <name>Talegaon Police Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6740344,18.7326644,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Police Station Talegaon</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.677325,18.714293,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dehu Road Police Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7218504,18.6862715,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Police Station Hinjawadi</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7357457,18.5861235,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chinchwad Police Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7800001,18.629542,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Talegaon MIDC Police Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.694283,18.7932679,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Police Station Vadgaon Maval</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6345233,18.7414015,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirgao Parandwadi Police Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6584713,18.696683,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>MIDC Bhosari Police Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.8426002,18.6480288,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ACP Police Dehuroad Division office</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7135734,18.6931051,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Hospital</name>
+      <Placemark>
+        <name><![CDATA[Harneshwar Multispeciality Hospital | ICU | Diabetes | General, Ortho, ENT & Uro-Surgery | Pediatric | Dialysis]]></name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6648639,18.7332993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Attharva Accident Hospital - Multispeciality Hospital in Talegaon</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6638541,18.7317154,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ANVEE MULTISPECIALITY HOSPITAL</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6812702,18.7454944,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Harneshwar Multispeciality Hospital | ICU | Diabetes | General, Ortho, ENT & Uro-Surgery | Pediatric | Dialysis]]></name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6648639,18.7332993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pawana Multispeciality Hospital | Orthopedic | Cardiology | Gynecology | Ophthalmology | Gastroenterology | Pediatrics</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6853591,18.7030595,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pioneer Hospital</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.685618,18.7041471,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sparsh Hospital</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6844645,18.7040238,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abhang Multispeciality Hospital</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7735286,18.7235,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Fire Station</name>
+      <Placemark>
+        <name>TALEGAON DABHADE MIDC FIRE STATION</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6890362,18.7704619,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Prapose fire stion baner</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6540415,18.7279734,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nanded City Fire Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.796631,18.4602641,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kothrud Fire Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.8134913,18.4990632,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Amanora Fire Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.9453898,18.5147822,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fire Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.8569992,18.5216312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Yerwada Fire Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.8791084,18.5502944,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>सिंहगड मार्ग अग्निशामक केंद्र</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.8156184,18.4755075,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Warje Fire Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.8028789,18.4833202,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>TALEGAON DABHADE MIDC FIRE STATION</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.6890362,18.7704619,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fire Station Wagholi</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.9692028,18.5884875,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fire station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.8027597,18.5403089,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Army</name>
+      <Placemark>
+        <name>Aundh Military Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7976638,18.5826332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aundh Military Station</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7976638,18.5826332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Old Military Hospital</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7141367,18.6911752,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>5 Bn NDRF</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7617749,18.7698037,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Type V, NDRF Camp, Sudumbare</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.762997,18.769723,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Type 3 NDRF camp</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.762726,18.7690656,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>RRC NDRF</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            72.8367665,19.1284429,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>5 Bn NDRF Gate no 2</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7577344,18.7628125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Motar Transport NDRF</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7601652,18.76598,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vijay Ainapure Qtr no 58 TYPE 3 NDRF</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            73.7624551,18.7687152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
